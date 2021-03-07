@@ -22,28 +22,30 @@ public class Launcher {
     }
 
     private static int[] sortInAscendingOrder(int[] numbersForSort) {
-        for (int out = numbersForSort.length - 1; out >= 1; out--) {
+        int[] resultArray = numbersForSort.clone();
+        for (int out = resultArray.length - 1; out >= 1; out--) {
             for (int in = 0; in < out; in++) {
-                if (numbersForSort[in] > numbersForSort[in + 1]) {
-                    int temp = numbersForSort[in];
-                    numbersForSort[in] = numbersForSort[in + 1];
-                    numbersForSort[in + 1] = temp;
+                if (resultArray[in] > resultArray[in + 1]) {
+                    int temp = resultArray[in];
+                    resultArray[in] = resultArray[in + 1];
+                    resultArray[in + 1] = temp;
                 }
             }
         }
-        return numbersForSort;
+        return resultArray;
     }
 
     private static int[] sortInDescendingOrder(int[] numbersForSort) {
-        for (int out = numbersForSort.length - 1; out >= 1; out--) {
+        int[] resultArray = numbersForSort.clone();
+        for (int out = resultArray.length - 1; out >= 1; out--) {
             for (int in = 0; in < out; in++) {
-                if (numbersForSort[in] < numbersForSort[in + 1]) {
-                    int temp = numbersForSort[in];
-                    numbersForSort[in] = numbersForSort[in + 1];
-                    numbersForSort[in + 1] = temp;
+                if (resultArray[in] < resultArray[in + 1]) {
+                    int temp = resultArray[in];
+                    resultArray[in] = resultArray[in + 1];
+                    resultArray[in + 1] = temp;
                 }
             }
         }
-        return numbersForSort;
+        return resultArray;
     }
 }

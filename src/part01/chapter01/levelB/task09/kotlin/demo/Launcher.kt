@@ -13,27 +13,29 @@ fun main() {
 }
 
 private fun sortInAscendingOrder(numbersForSort: IntArray): IntArray {
-    for (out in numbersForSort.size - 1 downTo 1) {
+    val resultArray = numbersForSort.clone()
+    for (out in resultArray.size - 1 downTo 1) {
         for (inIndex in 0 until out) {
-            if (numbersForSort[inIndex] > numbersForSort[inIndex + 1]) {
-                val temp = numbersForSort[inIndex]
-                numbersForSort[inIndex] = numbersForSort[inIndex + 1]
-                numbersForSort[inIndex + 1] = temp
+            if (resultArray[inIndex] > resultArray[inIndex + 1]) {
+                val temp = resultArray[inIndex]
+                resultArray[inIndex] = resultArray[inIndex + 1]
+                resultArray[inIndex + 1] = temp
             }
         }
     }
-    return numbersForSort
+    return resultArray
 }
 
 private fun sortInDescendingOrder(numbersForSort: IntArray): IntArray {
-    for (out in numbersForSort.size - 1 downTo 1) {
+    val resultArray = numbersForSort.clone()
+    for (out in resultArray.size - 1 downTo 1) {
         for (inIndex in 0 until out) {
-            if (numbersForSort[inIndex] < numbersForSort[inIndex + 1]) {
-                val temp = numbersForSort[inIndex]
-                numbersForSort[inIndex] = numbersForSort[inIndex + 1]
-                numbersForSort[inIndex + 1] = temp
+            if (resultArray[inIndex] < resultArray[inIndex + 1]) {
+                val temp = resultArray[inIndex]
+                resultArray[inIndex] = resultArray[inIndex + 1]
+                resultArray[inIndex + 1] = temp
             }
         }
     }
-    return numbersForSort
+    return resultArray
 }
