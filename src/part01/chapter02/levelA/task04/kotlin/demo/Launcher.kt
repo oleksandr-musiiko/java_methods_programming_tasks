@@ -28,7 +28,7 @@ private fun getNumberWithMinCountOfDifferentDigits(numbers: IntArray): Int {
 }
 
 private fun Int.getCountOfDigits(): Int {
-    val countOfDigits = IntArray(10)
+    val countOfDigits = ByteArray(10)
     val stringAbsoluteNumber = this.absoluteValue.toString()
     stringAbsoluteNumber.map { it.toString().toInt() }.forEach { countOfDigits[it]++ }
 

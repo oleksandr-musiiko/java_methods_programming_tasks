@@ -16,7 +16,7 @@ fun main() {
 }
 
 private fun isAllDigitsDifferent(number: Int): Boolean {
-    val countOfDigits = IntArray(10)
+    val countOfDigits = ByteArray(10)
 
     number.absoluteValue.toString().map { it.toString().toInt() }.forEach { countOfDigits[it]++ }
     countOfDigits.forEach { if (it > 1) return false }

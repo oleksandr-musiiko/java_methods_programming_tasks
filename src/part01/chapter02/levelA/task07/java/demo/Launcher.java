@@ -20,7 +20,7 @@ public class Launcher {
     }
 
     private static boolean isAllDigitsDifferent(int number) {
-        int[] countsOfDigits = new int[10];
+        byte[] countsOfDigits = new byte[10];
 
         char[] charDigits = String.valueOf(Math.abs(number)).toCharArray();
         for (char charDigit : charDigits) {

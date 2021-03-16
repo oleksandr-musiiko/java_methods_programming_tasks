@@ -29,7 +29,7 @@ public class Launcher {
     }
 
     private static int getCountOfDifferentDigits(int number) {
-        int[] countOfDigit = new int[10];
+        byte[] countOfDigit = new byte[10];
         char[] digitsOfNumber = String.valueOf(Math.abs(number)).toCharArray();
         for (char digit : digitsOfNumber) {
             int index = Integer.parseInt(String.valueOf(digit));
